@@ -12,7 +12,7 @@ terraform {
 }
 
 resource "aws_s3_bucket" "this" {
-  bucket                               = "testingEduBitsAdev123"
+  bucket                               = "testingEduBitsAdev123121212"
   force_destroy                        = "true"
   region                               = "eu-west-1"
 
