@@ -2,9 +2,6 @@
 
 This document will provide you all the details how to configure the github actions to trigger the terraform deployment. 
 
-## Github Actions Workflow 
-
-To have basic understanding of Github actions, please follow [Github Action Basic Video](https://www.youtube.com/watch?v=0VELgZOJs78)
 
 
 ## Basics of Github actions in the workflow
