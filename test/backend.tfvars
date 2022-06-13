@@ -1,3 +1,3 @@
-region = "us-east-1"
-bucket = "devops4solutions-terraform"
-key    = "ecs/test/eduuu/terraform.tfstate"
+region = "eu-west-1"
+bucket = "tfstateedudev"
+key    = "ecs/test/terraform.tfstate"
