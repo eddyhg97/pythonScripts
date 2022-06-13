@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "this_bucket" {
-  bucket = "demobucketedutestbitsade12345"
+  bucket = "demobucketedutestbitsade123"
 }
 
 resource "aws_s3_object" "object" {
