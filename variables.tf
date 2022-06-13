@@ -9,6 +9,6 @@ variable "folder_name" {
   type = list(string)
   default = ["folder1",
              "folder1/in",
-             "folder1/out",
+             "folder1/out"
              ]
 }
