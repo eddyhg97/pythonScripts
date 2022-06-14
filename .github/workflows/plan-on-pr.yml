@@ -31,7 +31,7 @@ jobs:
       matrix:
         path:
           - prod
-          - ptest
+          - test
 
     steps:
       - name: Check out code
