@@ -13,7 +13,7 @@ terraform {
 }
 
 resource "aws_s3_bucket" "this_bucket" {
-  bucket = "GitActionsEduAdevintaProd"
+  bucket = "gitactionseduadevintaprod"
 }
 
 resource "aws_s3_object" "object" {
