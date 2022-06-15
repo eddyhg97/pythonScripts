@@ -28,7 +28,6 @@ jobs:
       fail-fast: false
       matrix:
         path:
-          - prod
           - test
 
     steps:
