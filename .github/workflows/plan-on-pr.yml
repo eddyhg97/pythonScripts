@@ -29,7 +29,6 @@ jobs:
       matrix:
         path:
           - test
-          - prod
 
     steps:
       - name: Check out code
