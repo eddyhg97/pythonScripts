@@ -22,11 +22,13 @@ jobs:
   plan_and_apply:
     name: Plan and Apply
     env:
+
+      TF_VAR_allowed_account_id: ${{ secrets.ALLOWED_ACCOUNT_ID }}_${{ matrix.path }}
+      
       ACCESS: secrets.AWS_ACCESS_KEY_ID_${{ matrix.path }}
       SECRET: secrets.AWS_SECRET_ACCESS_KEY_${{ matrix.path }}
-      TF_VAR_allowed_account_id: ${{ secrets.ALLOWED_ACCOUNT_ID }}_${{ matrix.path }}
-      AWS_ACCESS_KEY_ID: ${{ACCESS}}
-      AWS_SECRET_ACCESS_KEY: ${{SECRET}}
+      AWS_ACCESS_KEY_ID: ${{env.ACCESS}}
+      AWS_SECRET_ACCESS_KEY: ${{env.SECRET}}
     runs-on: ubuntu-20.04
     strategy:
       fail-fast: false
