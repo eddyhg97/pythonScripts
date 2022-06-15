@@ -30,7 +30,6 @@ jobs:
       fail-fast: false
       matrix:
         path:
-          - test
           - prod
           
     steps:
