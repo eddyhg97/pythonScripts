@@ -27,8 +27,8 @@ jobs:
       
       ACCESS: secrets.AWS_ACCESS_KEY_ID_${{ matrix.path }}
       SECRET: secrets.AWS_SECRET_ACCESS_KEY_${{ matrix.path }}
-      AWS_ACCESS_KEY_ID: ${{env.ACCESS}}
-      AWS_SECRET_ACCESS_KEY: ${{env.SECRET}}
+      AWS_ACCESS_KEY_ID: $ACCESS
+      AWS_SECRET_ACCESS_KEY: $SECRET
     runs-on: ubuntu-20.04
     strategy:
       fail-fast: false
@@ -50,8 +50,8 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-region: eu-west-1
-          aws-access-key-id: echo ${{AWS_ACCESS_KEY_ID}}
-          aws-secret-access-key: echo ${{AWS_SECRET_ACCESS_KEY}}
+          aws-access-key-id: env.AWS_ACCESS_KEY_ID
+          aws-secret-access-key: env.AWS_SECRET_ACCESS_KEY
 
       - name: Initialize Terraform
         run: |
