@@ -23,12 +23,8 @@ jobs:
     name: Plan and Apply
     env:
 
-      TF_VAR_allowed_account_id: ${{ secrets.ALLOWED_ACCOUNT_ID }}_${{ matrix.path }}
-      
-      ACCESS: secrets.AWS_ACCESS_KEY_ID_${{ matrix.path }}
-      SECRET: secrets.AWS_SECRET_ACCESS_KEY_${{ matrix.path }}
-      AWS_ACCESS_KEY_ID: $ACCESS
-      AWS_SECRET_ACCESS_KEY: $SECRET
+      TF_VAR_allowed_account_id: ${{ secrets.ALLOWED_ACCOUNT_ID }}
+
     runs-on: ubuntu-20.04
     strategy:
       fail-fast: false
@@ -50,8 +46,8 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-region: eu-west-1
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID_TEST }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_TEST }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       - name: Initialize Terraform
         run: |
