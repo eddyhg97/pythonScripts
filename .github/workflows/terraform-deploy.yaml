@@ -22,7 +22,8 @@ jobs:
   plan_and_apply:
     name: Plan and Apply
     env:
-      TF_VAR_allowed_account_id: ${{ secrets.ALLOWED_ACCOUNT_ID${{ matrix.path }} }}
+      TestingAllowed: secrets.ALLOWED_ACCOUNT_ID_${{ matrix.path }}
+      TF_VAR_allowed_account_id: ${{ env.TestingAllowed}}
     runs-on: ubuntu-20.04
     strategy:
       fail-fast: false
