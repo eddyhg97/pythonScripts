@@ -12,7 +12,7 @@ terraform {
 }
 
 resource "aws_s3_bucket" "this_bucket" {
-  bucket = "gitactionseduadevintatest1"
+  bucket = "gitactionseduadevintatest34"
 }
 
 resource "aws_s3_object" "object" {
