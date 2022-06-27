@@ -5,7 +5,7 @@ provider "aws" {
 terraform {
   backend "s3"{
       bucket = "tfstateedudev"
-      key = "edu/devvpc/terraform.state"
+      key = "edu/testGithHubActions/terraform.state"
       region = "eu-west-1"
       dynamodb_table = "tflockedudev"
   }
